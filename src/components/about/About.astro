@@ -1,0 +1,40 @@
+---
+import AboutItem from "./AboutItem.astro";
+
+const aboutItems = [
+  {
+    title: "Nossa História",
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+  },
+  {
+    title: "Missão",
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+  },
+  {
+    title: "Visão",
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+  },
+  {
+    title: "Valores",
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+  },
+];
+---
+
+<section id="about" class="py-24 bg-black text-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center text-yellow-400 mb-16">
+      Sobre a StraalFit
+    </h2>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        {aboutItems.map((item) => <AboutItem {...item} />)}
+      </div>
+      <img
+        src="/img-sobre.jpg"
+        alt="Academia StraalFit"
+        class="w-full h-96 object-cover rounded-2xl shadow-lg"
+      />
+    </div>
+  </div>
+</section>
