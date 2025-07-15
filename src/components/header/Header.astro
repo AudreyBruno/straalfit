@@ -1,0 +1,45 @@
+---
+const navLinks = [
+  { href: "#home", label: "Início" },
+  { href: "#about", label: "Sobre nós" },
+  { href: "#benefits", label: "Benefícios" },
+  { href: "#testimonials", label: "Depoimentos" },
+  { href: "#pricing", label: "Planos" },
+  { href: "#location", label: "Localização" },
+  { href: "#contact", label: "Contato" },
+];
+---
+
+<header
+  class="fixed top-0 w-full bg-black/95 backdrop-blur z-50 py-4 transition-all"
+>
+  <nav class="container mx-auto flex justify-between items-center px-6">
+    <a
+      href="#"
+      class="text-2xl font-extrabold text-yellow-400 hover:scale-105 transition-transform"
+      >StraalFit</a
+    >
+    <ul class="hidden md:flex gap-8 list-none">
+      {
+        navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="relative text-white font-medium transition-colors hover:text-yellow-400 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 hover:after:w-full after:bg-yellow-400 after:transition-all"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <button
+      class="md:hidden text-white text-2xl cursor-pointer"
+      aria-label="Abrir menu"
+      type="button"
+    >
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+  </nav>
+</header>
