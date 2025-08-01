@@ -12,8 +12,7 @@ body {
 
 .hero-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
-    url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=2575&auto=format&fit=crop")
-      no-repeat center center/cover;
+    url("/public/photo-home.jpg") no-repeat center center/cover;
 }
 
 .nav-link {
