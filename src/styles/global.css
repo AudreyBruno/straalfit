@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.hero-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=2575&auto=format&fit=crop")
+      no-repeat center center/cover;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #fbbf24;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.nav-link:hover {
+  color: #fbbf24;
+}

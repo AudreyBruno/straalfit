@@ -1,0 +1,16 @@
+---
+const { name, image, alt, specialty, description } = Astro.props;
+---
+
+<div
+  class="bg-gray-900 p-6 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300 border-b-4 border-purple-600"
+>
+  <img
+    src={image}
+    alt={alt}
+    class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-purple-500"
+  />
+  <h3 class="text-2xl font-bold text-white">{name}</h3>
+  <p class="text-yellow-400 font-semibold mb-3">{specialty}</p>
+  <p class="text-gray-300">{description}</p>
+</div>
